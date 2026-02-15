@@ -1,0 +1,745 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/rafil/Projects/blink/build/bootloader/esp-idf/esptool_py && /home/rafil/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/rafil/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/rafil/Projects/blink/build/bootloader/bootloader.bin
+Bootloader binary size 0x66c0 bytes. 0x940 bytes (8%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/blink.c.obj
+FAILED: [code=1] esp-idf/main/CMakeFiles/__idf_main.dir/blink.c.obj 
+/home/rafil/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20251107/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.5.2\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/rafil/Projects/blink/build/config -I/home/rafil/Projects/blink/main -I/home/rafil/esp/esp-idf/components/newlib/platform_include -I/home/rafil/esp/esp-idf/components/freertos/config/include -I/home/rafil/esp/esp-idf/components/freertos/config/include/freertos -I/home/rafil/esp/esp-idf/components/freertos/config/xtensa/include -I/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/rafil/esp/esp-idf/components/freertos/esp_additions/include -I/home/rafil/esp/esp-idf/components/esp_hw_support/include -I/home/rafil/esp/esp-idf/components/esp_hw_support/include/soc -I/home/rafil/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/rafil/esp/esp-idf/components/esp_hw_support/dma/include -I/home/rafil/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/rafil/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/home/rafil/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/rafil/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/home/rafil/esp/esp-idf/components/esp_hw_support/power_supply/include -I/home/rafil/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/home/rafil/esp/esp-idf/components/esp_hw_support/port/esp32/include -I/home/rafil/esp/esp-idf/components/heap/include -I/home/rafil/esp/esp-idf/components/heap/tlsf -I/home/rafil/esp/esp-idf/components/log/include -I/home/rafil/esp/esp-idf/components/soc/include -I/home/rafil/esp/esp-idf/components/soc/esp32 -I/home/rafil/esp/esp-idf/components/soc/esp32/include -I/home/rafil/esp/esp-idf/components/soc/esp32/register -I/home/rafil/esp/esp-idf/components/hal/platform_port/include -I/home/rafil/esp/esp-idf/components/hal/esp32/include -I/home/rafil/esp/esp-idf/components/hal/include -I/home/rafil/esp/esp-idf/components/esp_rom/include -I/home/rafil/esp/esp-idf/components/esp_rom/esp32/include -I/home/rafil/esp/esp-idf/components/esp_rom/esp32/include/esp32 -I/home/rafil/esp/esp-idf/components/esp_rom/esp32 -I/home/rafil/esp/esp-idf/components/esp_common/include -I/home/rafil/esp/esp-idf/components/esp_system/include -I/home/rafil/esp/esp-idf/components/esp_system/port/soc -I/home/rafil/esp/esp-idf/components/esp_system/port/include/private -I/home/rafil/esp/esp-idf/components/xtensa/esp32/include -I/home/rafil/esp/esp-idf/components/xtensa/include -I/home/rafil/esp/esp-idf/components/xtensa/deprecated_include -I/home/rafil/esp/esp-idf/components/lwip/include -I/home/rafil/esp/esp-idf/components/lwip/include/apps -I/home/rafil/esp/esp-idf/components/lwip/include/apps/sntp -I/home/rafil/esp/esp-idf/components/lwip/lwip/src/include -I/home/rafil/esp/esp-idf/components/lwip/port/include -I/home/rafil/esp/esp-idf/components/lwip/port/freertos/include -I/home/rafil/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/rafil/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/rafil/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/rafil/esp/esp-idf/components/esp_driver_gpio/include -I/home/rafil/esp/esp-idf/components/esp_pm/include -I/home/rafil/esp/esp-idf/components/mbedtls/port/include -I/home/rafil/esp/esp-idf/components/mbedtls/mbedtls/include -I/home/rafil/esp/esp-idf/components/mbedtls/mbedtls/library -I/home/rafil/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/rafil/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -I/home/rafil/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -I/home/rafil/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -I/home/rafil/esp/esp-idf/components/esp_app_format/include -I/home/rafil/esp/esp-idf/components/esp_bootloader_format/include -I/home/rafil/esp/esp-idf/components/app_update/include -I/home/rafil/esp/esp-idf/components/bootloader_support/include -I/home/rafil/esp/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/rafil/esp/esp-idf/components/esp_partition/include -I/home/rafil/esp/esp-idf/components/efuse/include -I/home/rafil/esp/esp-idf/components/efuse/esp32/include -I/home/rafil/esp/esp-idf/components/esp_mm/include -I/home/rafil/esp/esp-idf/components/spi_flash/include -I/home/rafil/esp/esp-idf/components/esp_security/include -I/home/rafil/esp/esp-idf/components/pthread/include -I/home/rafil/esp/esp-idf/components/esp_timer/include -I/home/rafil/esp/esp-idf/components/esp_driver_gptimer/include -I/home/rafil/esp/esp-idf/components/esp_ringbuf/include -I/home/rafil/esp/esp-idf/components/esp_driver_uart/include -I/home/rafil/esp/esp-idf/components/vfs/include -I/home/rafil/esp/esp-idf/components/app_trace/include -I/home/rafil/esp/esp-idf/components/esp_event/include -I/home/rafil/esp/esp-idf/components/nvs_flash/include -I/home/rafil/esp/esp-idf/components/esp_phy/include -I/home/rafil/esp/esp-idf/components/esp_phy/esp32/include -I/home/rafil/esp/esp-idf/components/esp_driver_usb_serial_jtag/include -I/home/rafil/esp/esp-idf/components/esp_vfs_console/include -I/home/rafil/esp/esp-idf/components/esp_netif/include -I/home/rafil/esp/esp-idf/components/wpa_supplicant/include -I/home/rafil/esp/esp-idf/components/wpa_supplicant/port/include -I/home/rafil/esp/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/rafil/esp/esp-idf/components/esp_coex/include -I/home/rafil/esp/esp-idf/components/esp_wifi/include -I/home/rafil/esp/esp-idf/components/esp_wifi/include/local -I/home/rafil/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/home/rafil/esp/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -I/home/rafil/esp/esp-idf/components/esp_driver_spi/include -I/home/rafil/esp/esp-idf/components/esp_gdbstub/include -I/home/rafil/esp/esp-idf/components/unity/include -I/home/rafil/esp/esp-idf/components/unity/unity/src -I/home/rafil/esp/esp-idf/components/cmock/CMock/src -I/home/rafil/esp/esp-idf/components/console -I/home/rafil/esp/esp-idf/components/esp_driver_pcnt/include -I/home/rafil/esp/esp-idf/components/esp_driver_mcpwm/include -I/home/rafil/esp/esp-idf/components/esp_driver_ana_cmpr/include -I/home/rafil/esp/esp-idf/components/esp_driver_i2s/include -I/home/rafil/esp/esp-idf/components/sdmmc/include -I/home/rafil/esp/esp-idf/components/esp_driver_sdmmc/include -I/home/rafil/esp/esp-idf/components/esp_driver_sdspi/include -I/home/rafil/esp/esp-idf/components/esp_driver_sdio/include -I/home/rafil/esp/esp-idf/components/esp_driver_dac/include -I/home/rafil/esp/esp-idf/components/esp_driver_bitscrambler/include -I/home/rafil/esp/esp-idf/components/esp_driver_rmt/include -I/home/rafil/esp/esp-idf/components/esp_driver_tsens/include -I/home/rafil/esp/esp-idf/components/esp_driver_sdm/include -I/home/rafil/esp/esp-idf/components/esp_driver_i2c/include -I/home/rafil/esp/esp-idf/components/esp_driver_ledc/include -I/home/rafil/esp/esp-idf/components/esp_driver_parlio/include -I/home/rafil/esp/esp-idf/components/esp_driver_twai/include -I/home/rafil/esp/esp-idf/components/driver/deprecated -I/home/rafil/esp/esp-idf/components/driver/i2c/include -I/home/rafil/esp/esp-idf/components/driver/touch_sensor/include -I/home/rafil/esp/esp-idf/components/driver/twai/include -I/home/rafil/esp/esp-idf/components/driver/touch_sensor/esp32/include -I/home/rafil/esp/esp-idf/components/http_parser -I/home/rafil/esp/esp-idf/components/esp-tls -I/home/rafil/esp/esp-idf/components/esp-tls/esp-tls-crypto -I/home/rafil/esp/esp-idf/components/esp_adc/include -I/home/rafil/esp/esp-idf/components/esp_adc/interface -I/home/rafil/esp/esp-idf/components/esp_adc/esp32/include -I/home/rafil/esp/esp-idf/components/esp_adc/deprecated/include -I/home/rafil/esp/esp-idf/components/esp_driver_isp/include -I/home/rafil/esp/esp-idf/components/esp_driver_cam/include -I/home/rafil/esp/esp-idf/components/esp_driver_cam/interface -I/home/rafil/esp/esp-idf/components/esp_psram/include -I/home/rafil/esp/esp-idf/components/esp_driver_jpeg/include -I/home/rafil/esp/esp-idf/components/esp_driver_ppa/include -I/home/rafil/esp/esp-idf/components/esp_driver_touch_sens/include -I/home/rafil/esp/esp-idf/components/esp_driver_touch_sens/hw_ver1/include -I/home/rafil/esp/esp-idf/components/esp_eth/include -I/home/rafil/esp/esp-idf/components/esp_hid/include -I/home/rafil/esp/esp-idf/components/tcp_transport/include -I/home/rafil/esp/esp-idf/components/esp_http_client/include -I/home/rafil/esp/esp-idf/components/esp_http_server/include -I/home/rafil/esp/esp-idf/components/esp_https_ota/include -I/home/rafil/esp/esp-idf/components/esp_https_server/include -I/home/rafil/esp/esp-idf/components/esp_lcd/include -I/home/rafil/esp/esp-idf/components/esp_lcd/interface -I/home/rafil/esp/esp-idf/components/protobuf-c/protobuf-c -I/home/rafil/esp/esp-idf/components/protocomm/include/common -I/home/rafil/esp/esp-idf/components/protocomm/include/security -I/home/rafil/esp/esp-idf/components/protocomm/include/transports -I/home/rafil/esp/esp-idf/components/protocomm/include/crypto/srp6a -I/home/rafil/esp/esp-idf/components/protocomm/proto-c -I/home/rafil/esp/esp-idf/components/esp_local_ctrl/include -I/home/rafil/esp/esp-idf/components/espcoredump/include -I/home/rafil/esp/esp-idf/components/espcoredump/include/port/xtensa -I/home/rafil/esp/esp-idf/components/wear_levelling/include -I/home/rafil/esp/esp-idf/components/fatfs/diskio -I/home/rafil/esp/esp-idf/components/fatfs/src -I/home/rafil/esp/esp-idf/components/fatfs/vfs -I/home/rafil/esp/esp-idf/components/idf_test/include -I/home/rafil/esp/esp-idf/components/idf_test/include/esp32 -I/home/rafil/esp/esp-idf/components/ieee802154/include -I/home/rafil/esp/esp-idf/components/json/cJSON -I/home/rafil/esp/esp-idf/components/mqtt/esp-mqtt/include -I/home/rafil/esp/esp-idf/components/nvs_sec_provider/include -I/home/rafil/esp/esp-idf/components/perfmon/include -I/home/rafil/esp/esp-idf/components/rt/include -I/home/rafil/esp/esp-idf/components/spiffs/include -I/home/rafil/esp/esp-idf/components/wifi_provisioning/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/rafil/Projects/blink=. -fmacro-prefix-map=/home/rafil/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/blink.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/blink.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/blink.c.obj -c /home/rafil/Projects/blink/main/blink.c
+In file included from /home/rafil/Projects/blink/main/blink.c:2:
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:38:6: error: #error "include FreeRTOS.h must appear in source files before include task.h"
+   38 |     #error "include FreeRTOS.h must appear in source files before include task.h"
+      |      ^~~~~
+In file included from /home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:41:
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:66:6: error: #error "FreeRTOS.h must be included before list.h"
+   66 |     #error "FreeRTOS.h must be included before list.h"
+      |      ^~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:151:25: error: unknown type name 'TickType_t'
+  151 |     configLIST_VOLATILE TickType_t xItemValue;          /*< The value being listed.  In most cases this is used to sort the list in ascending order. */
+      |                         ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:179:14: error: unknown type name 'UBaseType_t'
+  179 |     volatile UBaseType_t uxNumberOfItems;
+      |              ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h: In function 'vListInitialise':
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:437:47: error: expected declaration specifiers before 'PRIVILEGED_FUNCTION'
+  437 | void vListInitialise( List_t * const pxList ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:448:55: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  448 | void vListInitialiseItem( ListItem_t * const pxItem ) PRIVILEGED_FUNCTION;
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:462:54: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  462 |                   ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:484:57: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  484 |                      ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                         ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:499:1: error: unknown type name 'UBaseType_t'
+  499 | UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:499:63: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  499 | UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) PRIVILEGED_FUNCTION;
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:92:1: warning: empty declaration
+   92 | struct tskTaskControlBlock; /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+      | ^~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:93:38: error: storage class specified for parameter 'TaskHandle_t'
+   93 | typedef struct tskTaskControlBlock * TaskHandle_t;
+      |                                      ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:99:21: error: expected declaration specifiers or '...' before '*' token
+   99 | typedef BaseType_t (* TaskHookFunction_t)( void * );
+      |                     ^
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:110:3: error: storage class specified for parameter 'eTaskState'
+  110 | } eTaskState;
+      |   ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:120:3: error: storage class specified for parameter 'eNotifyAction'
+  120 | } eNotifyAction;
+      |   ^~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:129:5: error: unknown type name 'BaseType_t'
+  129 |     BaseType_t xOverflowCount;
+      |     ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:130:5: error: unknown type name 'TickType_t'
+  130 |     TickType_t xTimeOnEntering;
+      |     ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:131:3: error: storage class specified for parameter 'TimeOut_t'
+  131 | } TimeOut_t;
+      |   ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:141:3: error: storage class specified for parameter 'MemoryRegion_t'
+  141 | } MemoryRegion_t;
+      |   ^~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:148:5: error: unknown type name 'TaskFunction_t'
+  148 |     TaskFunction_t pvTaskCode;
+      |     ^~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:150:5: error: unknown type name 'configSTACK_DEPTH_TYPE'
+  150 |     configSTACK_DEPTH_TYPE usStackDepth;
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:152:5: error: unknown type name 'UBaseType_t'
+  152 |     UBaseType_t uxPriority;
+      |     ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:153:5: error: unknown type name 'StackType_t'
+  153 |     StackType_t * puxStackBuffer;
+      |     ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:154:5: error: expected specifier-qualifier-list before 'MemoryRegion_t'
+  154 |     MemoryRegion_t xRegions[ portNUM_CONFIGURABLE_REGIONS ];
+      |     ^~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:158:3: error: storage class specified for parameter 'TaskParameters_t'
+  158 | } TaskParameters_t;
+      |   ^~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:166:5: error: expected specifier-qualifier-list before 'TaskHandle_t'
+  166 |     TaskHandle_t xHandle;                         /**< The handle of the task to which the rest of the information in the structure relates. */
+      |     ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:182:3: error: storage class specified for parameter 'TaskStatus_t'
+  182 | } TaskStatus_t;
+      |   ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:192:3: error: storage class specified for parameter 'eSleepModeStatus'
+  192 | } eSleepModeStatus;
+      |   ^~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:746:31: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+  746 | void vTaskAllocateMPURegions( TaskHandle_t xTask,
+      |                               ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:747:37: error: type defaults to 'int' in declaration of 'MemoryRegion_t' [-Wimplicit-int]
+  747 |                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:747:52: error: expected ';', ',' or ')' before '*' token
+  747 |                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+      |                                                    ^
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:785:19: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+  785 | void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+      |                   ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:834:24: error: unknown type name 'TickType_t'
+  834 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:834:51: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  834 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:896:1: error: unknown type name 'BaseType_t'
+  896 | BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:896:29: error: unknown type name 'TickType_t'
+  896 | BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+      |                             ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:897:35: error: unknown type name 'TickType_t'
+  897 |                             const TickType_t xTimeIncrement ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:938:1: error: unknown type name 'BaseType_t'
+  938 | BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:938:29: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+  938 | BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                             ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:982:1: error: unknown type name 'UBaseType_t'
+  982 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:982:38: error: type defaults to 'int' in declaration of 'TaskHandle_t' [-Wimplicit-int]
+  982 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                      ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:982:51: error: expected ';', ',' or ')' before 'xTask'
+  982 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:988:1: error: unknown type name 'UBaseType_t'
+  988 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:988:45: error: type defaults to 'int' in declaration of 'TaskHandle_t' [-Wimplicit-int]
+  988 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:988:58: error: expected ';', ',' or ')' before 'xTask'
+  988 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                          ^~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1004:1: error: expected declaration specifiers before 'eTaskState'
+ 1004 | eTaskState eTaskGetState( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1057:20: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1057 | void vTaskGetInfo( TaskHandle_t xTask,
+      |                    ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1058:20: error: expected declaration specifiers or '...' before 'TaskStatus_t'
+ 1058 |                    TaskStatus_t * pxTaskStatus,
+      |                    ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1059:20: error: unknown type name 'BaseType_t'
+ 1059 |                    BaseType_t xGetFreeStackSpace,
+      |                    ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1060:20: error: expected declaration specifiers or '...' before 'eTaskState'
+ 1060 |                    eTaskState eState ) PRIVILEGED_FUNCTION;
+      |                    ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1099:24: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1099 | void vTaskPrioritySet( TaskHandle_t xTask,
+      |                        ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1100:24: error: unknown type name 'UBaseType_t'
+ 1100 |                        UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1148:20: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1148 | void vTaskSuspend( TaskHandle_t xTaskToSuspend ) PRIVILEGED_FUNCTION;
+      |                    ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1194:19: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1194 | void vTaskResume( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      |                   ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1220:1: error: unknown type name 'BaseType_t'
+ 1220 | BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1220:32: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1220 | BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1252:34: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1252 | void vTaskStartScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1305:32: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1305 | void vTaskEndScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1355:30: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1355 | void vTaskSuspendAll( void ) PRIVILEGED_FUNCTION;
+      |                              ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1406:1: error: unknown type name 'BaseType_t'
+ 1406 | BaseType_t xTaskResumeAll( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1406:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1406 | BaseType_t xTaskResumeAll( void ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1418:1: error: unknown type name 'TickType_t'
+ 1418 | TickType_t xTaskGetTickCount( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1418:38: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1418 | TickType_t xTaskGetTickCount( void ) PRIVILEGED_FUNCTION;
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1431:1: error: unknown type name 'TickType_t'
+ 1431 | TickType_t xTaskGetTickCountFromISR( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1431:45: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1431 | TickType_t xTaskGetTickCountFromISR( void ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1442:1: error: unknown type name 'UBaseType_t'
+ 1442 | UBaseType_t uxTaskGetNumberOfTasks( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1442:44: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1442 | UBaseType_t uxTaskGetNumberOfTasks( void ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1452:23: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1452 | char * pcTaskGetName( TaskHandle_t xTaskToQuery ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                       ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1465:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 1465 | TaskHandle_t xTaskGetHandle( const char * pcNameToQuery ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      | ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1513:1: error: unknown type name 'UBaseType_t'
+ 1513 | UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1513:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1513 | UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                          ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1538:1: error: unknown type name 'configSTACK_DEPTH_TYPE'
+ 1538 | configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1538:54: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1538 | configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1641:1: error: unknown type name 'BaseType_t'
+ 1641 | BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1641:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1641 | BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask,
+      |                                          ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1651:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 1651 | TaskHandle_t xTaskGetIdleTaskHandle( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1750:1: error: unknown type name 'UBaseType_t'
+ 1750 | UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray,
+      | ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1750:35: error: expected declaration specifiers or '...' before 'TaskStatus_t'
+ 1750 | UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray,
+      |                                   ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1751:41: error: unknown type name 'UBaseType_t'
+ 1751 |                                   const UBaseType_t uxArraySize,
+      |                                         ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1752:35: error: unknown type name 'configRUN_TIME_COUNTER_TYPE'
+ 1752 |                                   configRUN_TIME_COUNTER_TYPE * const pulTotalRunTime ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1798:40: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1798 | void vTaskList( char * pcWriteBuffer ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                        ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1849:51: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1849 | void vTaskGetRunTimeStats( char * pcWriteBuffer ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1886:1: error: unknown type name 'configRUN_TIME_COUNTER_TYPE'
+ 1886 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimeCounter( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1886:65: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1886 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimeCounter( void ) PRIVILEGED_FUNCTION;
+      |                                                                 ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1887:1: error: unknown type name 'configRUN_TIME_COUNTER_TYPE'
+ 1887 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimePercent( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1887:65: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1887 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimePercent( void ) PRIVILEGED_FUNCTION;
+      |                                                                 ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1992:1: error: unknown type name 'BaseType_t'
+ 1992 | BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1992:32: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1992 | BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,
+      |                                ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1993:32: error: unknown type name 'UBaseType_t'
+ 1993 |                                UBaseType_t uxIndexToNotify,
+      |                                ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1995:32: error: expected declaration specifiers or '...' before 'eNotifyAction'
+ 1995 |                                eNotifyAction eAction,
+      |                                ^~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2136:1: error: unknown type name 'BaseType_t'
+ 2136 | BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2136:39: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2136 | BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify,
+      |                                       ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2137:39: error: unknown type name 'UBaseType_t'
+ 2137 |                                       UBaseType_t uxIndexToNotify,
+      |                                       ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2139:39: error: expected declaration specifiers or '...' before 'eNotifyAction'
+ 2139 |                                       eNotifyAction eAction,
+      |                                       ^~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2141:39: error: unknown type name 'BaseType_t'
+ 2141 |                                       BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                       ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2271:1: error: unknown type name 'BaseType_t'
+ 2271 | BaseType_t xTaskGenericNotifyWait( UBaseType_t uxIndexToWaitOn,
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2271:36: error: unknown type name 'UBaseType_t'
+ 2271 | BaseType_t xTaskGenericNotifyWait( UBaseType_t uxIndexToWaitOn,
+      |                                    ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2275:36: error: unknown type name 'TickType_t'
+ 2275 |                                    TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                    ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2427:37: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2427 | void vTaskGenericNotifyGiveFromISR( TaskHandle_t xTaskToNotify,
+      |                                     ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2428:37: error: unknown type name 'UBaseType_t'
+ 2428 |                                     UBaseType_t uxIndexToNotify,
+      |                                     ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2429:37: error: unknown type name 'BaseType_t'
+ 2429 |                                     BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2527:35: error: unknown type name 'UBaseType_t'
+ 2527 | uint32_t ulTaskGenericNotifyTake( UBaseType_t uxIndexToWaitOn,
+      |                                   ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2528:35: error: unknown type name 'BaseType_t'
+ 2528 |                                   BaseType_t xClearCountOnExit,
+      |                                   ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2529:35: error: unknown type name 'TickType_t'
+ 2529 |                                   TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2586:1: error: unknown type name 'BaseType_t'
+ 2586 | BaseType_t xTaskGenericNotifyStateClear( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2586:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2586 | BaseType_t xTaskGenericNotifyStateClear( TaskHandle_t xTask,
+      |                                          ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2587:42: error: unknown type name 'UBaseType_t'
+ 2587 |                                          UBaseType_t uxIndexToClear ) PRIVILEGED_FUNCTION;
+      |                                          ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2644:41: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2644 | uint32_t ulTaskGenericNotifyValueClear( TaskHandle_t xTask,
+      |                                         ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2645:41: error: unknown type name 'UBaseType_t'
+ 2645 |                                         UBaseType_t uxIndexToClear,
+      |                                         ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2661:28: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 2661 | void vTaskSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                            ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2741:1: error: unknown type name 'BaseType_t'
+ 2741 | BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2741:34: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 2741 | BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
+      |                                  ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2742:34: error: unknown type name 'TickType_t'
+ 2742 |                                  TickType_t * const pxTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2765:1: error: unknown type name 'BaseType_t'
+ 2765 | BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2765:31: error: unknown type name 'TickType_t'
+ 2765 | BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;
+      |                               ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2792:1: error: unknown type name 'BaseType_t'
+ 2792 | BaseType_t xTaskIncrementTick( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2792:39: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2792 | BaseType_t xTaskIncrementTick( void ) PRIVILEGED_FUNCTION;
+      |                                       ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2826:35: error: unknown type name 'TickType_t'
+ 2826 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2826:61: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2826 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                             ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2828:44: error: unknown type name 'TickType_t'
+ 2828 |                                      const TickType_t xItemValue,
+      |                                            ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2829:44: error: unknown type name 'TickType_t'
+ 2829 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2829:70: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2829 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                                      ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2843:39: error: unknown type name 'TickType_t'
+ 2843 |                                       TickType_t xTicksToWait,
+      |                                       ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2844:45: error: unknown type name 'BaseType_t'
+ 2844 |                                       const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2870:1: error: unknown type name 'BaseType_t'
+ 2870 | BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2870:73: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2870 | BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) PRIVILEGED_FUNCTION;
+      |                                                                         ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2872:47: error: unknown type name 'TickType_t'
+ 2872 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2872:71: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2872 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                                                       ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2882:1: error: expected declaration specifiers before 'portDONT_DISCARD'
+ 2882 | portDONT_DISCARD void vTaskSwitchContext( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2888:1: error: unknown type name 'TickType_t'
+ 2888 | TickType_t uxTaskResetEventItemValue( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2888:46: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2888 | TickType_t uxTaskResetEventItemValue( void ) PRIVILEGED_FUNCTION;
+      |                                              ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2893:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 2893 | TaskHandle_t xTaskGetCurrentTaskHandle( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2899:31: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2899 | void vTaskMissedYield( void ) PRIVILEGED_FUNCTION;
+      |                               ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2905:1: error: unknown type name 'BaseType_t'
+ 2905 | BaseType_t xTaskGetSchedulerState( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2905:43: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2905 | BaseType_t xTaskGetSchedulerState( void ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2911:1: error: unknown type name 'BaseType_t'
+ 2911 | BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2911:34: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2911 | BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2917:1: error: unknown type name 'BaseType_t'
+ 2917 | BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2917:37: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2917 | BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2927:43: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2927 | void vTaskPriorityDisinheritAfterTimeout( TaskHandle_t const pxMutexHolder,
+      |                                           ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2928:43: error: unknown type name 'UBaseType_t'
+ 2928 |                                           UBaseType_t uxHighestPriorityWaitingTask ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2933:1: error: unknown type name 'UBaseType_t'
+ 2933 | UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2933:34: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2933 | UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2939:26: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2939 | void vTaskSetTaskNumber( TaskHandle_t xTask,
+      |                          ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2940:32: error: unknown type name 'UBaseType_t'
+ 2940 |                          const UBaseType_t uxHandle ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2950:21: error: unknown type name 'TickType_t'
+ 2950 | void vTaskStepTick( TickType_t xTicksToJump ) PRIVILEGED_FUNCTION;
+      |                     ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2966:1: error: expected declaration specifiers before 'eSleepModeStatus'
+ 2966 | eSleepModeStatus eTaskConfirmSleepModeStatus( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2972:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 2972 | TaskHandle_t pvTaskIncrementMutexHeldCount( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2978:36: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 2978 | void vTaskInternalSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                                    ^~~~~~~~~
+In file included from /home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:12,
+                 from /home/rafil/Projects/blink/main/blink.c:3:
+/home/rafil/esp/esp-idf/components/esp_common/include/esp_err.h:19:13: error: storage class specified for parameter 'esp_err_t'
+   19 | typedef int esp_err_t;
+      |             ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_common/include/esp_err.h:58:29: error: expected declaration specifiers or '...' before 'esp_err_t'
+   58 | const char *esp_err_to_name(esp_err_t code);
+      |                             ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_common/include/esp_err.h:76:31: error: expected declaration specifiers or '...' before 'esp_err_t'
+   76 | const char *esp_err_to_name_r(esp_err_t code, char *buf, size_t buflen);
+      |                               ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_common/include/esp_err.h:79:30: error: expected declaration specifiers or '...' before 'esp_err_t'
+   79 | void _esp_error_check_failed(esp_err_t rc, const char *file, int line, const char *function, const char *expression) __attribute__((__noreturn__));
+      |                              ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_common/include/esp_err.h:81:44: error: expected declaration specifiers or '...' before 'esp_err_t'
+   81 | void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int line, const char *function, const char *expression);
+      |                                            ^~~~~~~~~
+In file included from /home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:13,
+                 from /home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:13:
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_types.h:13:16: error: storage class specified for parameter 'intr_handler_t'
+   13 | typedef void (*intr_handler_t)(void *arg);
+      |                ^~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_types.h:16:36: error: storage class specified for parameter 'intr_handle_t'
+   16 | typedef struct intr_handle_data_t *intr_handle_t;
+      |                                    ^~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_types.h:27:3: error: storage class specified for parameter 'esp_intr_cpu_affinity_t'
+   27 | } esp_intr_cpu_affinity_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:99:1: error: expected declaration specifiers before 'esp_err_t'
+   99 | esp_err_t esp_intr_mark_shared(int intno, int cpu, bool is_in_iram);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:113:1: error: expected declaration specifiers before 'esp_err_t'
+  113 | esp_err_t esp_intr_reserve(int intno, int cpu);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:149:1: error: expected declaration specifiers before 'esp_err_t'
+  149 | esp_err_t esp_intr_alloc(int source, int flags, intr_handler_t handler, void *arg, intr_handle_t *ret_handle);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:188:1: error: expected declaration specifiers before 'esp_err_t'
+  188 | esp_err_t esp_intr_alloc_intrstatus(int source, int flags, uint32_t intrstatusreg, uint32_t intrstatusmask, intr_handler_t handler, void *arg, intr_handle_t *ret_handle);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:226:1: error: expected declaration specifiers before 'esp_err_t'
+  226 | esp_err_t esp_intr_alloc_bind(int source, int flags, intr_handler_t handler, void *arg, intr_handle_t shared_handle, intr_handle_t *ret_handle);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:269:1: error: expected declaration specifiers before 'esp_err_t'
+  269 | esp_err_t esp_intr_alloc_intrstatus_bind(int source, int flags, uint32_t intrstatusreg, uint32_t intrstatusmask, intr_handler_t handler,
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:290:1: error: expected declaration specifiers before 'esp_err_t'
+  290 | esp_err_t esp_intr_free(intr_handle_t handle);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:300:22: error: expected declaration specifiers or '...' before 'intr_handle_t'
+  300 | int esp_intr_get_cpu(intr_handle_t handle);
+      |                      ^~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:309:24: error: expected declaration specifiers or '...' before 'intr_handle_t'
+  309 | int esp_intr_get_intno(intr_handle_t handle);
+      |                        ^~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:327:1: error: expected declaration specifiers before 'esp_err_t'
+  327 | esp_err_t esp_intr_disable(intr_handle_t handle);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:340:1: error: expected declaration specifiers before 'esp_err_t'
+  340 | esp_err_t esp_intr_enable(intr_handle_t handle);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:354:1: error: expected declaration specifiers before 'esp_err_t'
+  354 | esp_err_t esp_intr_set_in_iram(intr_handle_t handle, bool is_in_iram);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:383:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  383 | {
+      | ^
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:392:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  392 | {
+      | ^
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:401:1: error: expected declaration specifiers before 'esp_err_t'
+  401 | esp_err_t esp_intr_dump(FILE *stream);
+      | ^~~~~~~~~
+In file included from /home/rafil/esp/esp-idf/components/hal/include/hal/gpio_types.h:12,
+                 from /home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:15:
+/home/rafil/esp/esp-idf/components/soc/esp32/include/soc/gpio_num.h:58:3: error: storage class specified for parameter 'gpio_num_t'
+   58 | } gpio_num_t;
+      |   ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/hal/include/hal/gpio_types.h:22:3: error: storage class specified for parameter 'gpio_port_t'
+   22 | } gpio_port_t;
+      |   ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/hal/include/hal/gpio_types.h:88:3: error: storage class specified for parameter 'gpio_int_type_t'
+   88 | } gpio_int_type_t;
+      |   ^~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/hal/include/hal/gpio_types.h:104:3: error: storage class specified for parameter 'gpio_mode_t'
+  104 | } gpio_mode_t;
+      |   ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/hal/include/hal/gpio_types.h:109:3: error: storage class specified for parameter 'gpio_pullup_t'
+  109 | } gpio_pullup_t;
+      |   ^~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/hal/include/hal/gpio_types.h:114:3: error: storage class specified for parameter 'gpio_pulldown_t'
+  114 | } gpio_pulldown_t;
+      |   ^~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/hal/include/hal/gpio_types.h:121:3: error: storage class specified for parameter 'gpio_pull_mode_t'
+  121 | } gpio_pull_mode_t;
+      |   ^~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/hal/include/hal/gpio_types.h:130:3: error: storage class specified for parameter 'gpio_drive_cap_t'
+  130 | } gpio_drive_cap_t;
+      |   ^~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/hal/include/hal/gpio_types.h:151:5: error: expected specifier-qualifier-list before 'gpio_drive_cap_t'
+  151 |     gpio_drive_cap_t drv;           /*!< Value of drive strength */
+      |     ^~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/hal/include/hal/gpio_types.h:160:3: error: storage class specified for parameter 'gpio_io_config_t'
+  160 | } gpio_io_config_t;
+      |   ^~~~~~~~~~~~~~~~
+In file included from /home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h:10,
+                 from /home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:17:
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_etm.h:19:35: error: storage class specified for parameter 'esp_etm_channel_handle_t'
+   19 | typedef struct esp_etm_channel_t *esp_etm_channel_handle_t;
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_etm.h:24:33: error: storage class specified for parameter 'esp_etm_event_handle_t'
+   24 | typedef struct esp_etm_event_t *esp_etm_event_handle_t;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_etm.h:29:32: error: storage class specified for parameter 'esp_etm_task_handle_t'
+   29 | typedef struct esp_etm_task_t *esp_etm_task_handle_t;
+      |                                ^~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_etm.h:40:3: error: storage class specified for parameter 'esp_etm_channel_config_t'
+   40 | } esp_etm_channel_config_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_etm.h:56:1: error: expected declaration specifiers before 'esp_err_t'
+   56 | esp_err_t esp_etm_new_channel(const esp_etm_channel_config_t *config, esp_etm_channel_handle_t *ret_chan);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_etm.h:67:1: error: expected declaration specifiers before 'esp_err_t'
+   67 | esp_err_t esp_etm_del_channel(esp_etm_channel_handle_t chan);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_etm.h:81:1: error: expected declaration specifiers before 'esp_err_t'
+   81 | esp_err_t esp_etm_channel_enable(esp_etm_channel_handle_t chan);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_etm.h:95:1: error: expected declaration specifiers before 'esp_err_t'
+   95 | esp_err_t esp_etm_channel_disable(esp_etm_channel_handle_t chan);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_etm.h:110:1: error: expected declaration specifiers before 'esp_err_t'
+  110 | esp_err_t esp_etm_channel_connect(esp_etm_channel_handle_t chan, esp_etm_event_handle_t event, esp_etm_task_handle_t task);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_etm.h:123:1: error: expected declaration specifiers before 'esp_err_t'
+  123 | esp_err_t esp_etm_del_event(esp_etm_event_handle_t event);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_etm.h:136:1: error: expected declaration specifiers before 'esp_err_t'
+  136 | esp_err_t esp_etm_del_task(esp_etm_task_handle_t task);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_hw_support/include/esp_etm.h:147:1: error: expected declaration specifiers before 'esp_err_t'
+  147 | esp_err_t esp_etm_dump(FILE *out_stream);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h:26:3: error: storage class specified for parameter 'gpio_etm_event_edge_t'
+   26 | } gpio_etm_event_edge_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h:36:9: error: expected specifier-qualifier-list before 'gpio_etm_event_edge_t'
+   36 |         gpio_etm_event_edge_t edge;                                 /*!< Which kind of edge can trigger the ETM event module */
+      |         ^~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h:39:3: error: storage class specified for parameter 'gpio_etm_event_config_t'
+   39 | } gpio_etm_event_config_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h:58:1: error: expected declaration specifiers before 'esp_err_t'
+   58 | esp_err_t gpio_new_etm_event(const gpio_etm_event_config_t *config, esp_etm_event_handle_t *ret_event, ...);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h:73:1: error: expected declaration specifiers before 'esp_err_t'
+   73 | esp_err_t gpio_etm_event_bind_gpio(esp_etm_event_handle_t event, int gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h:82:3: error: storage class specified for parameter 'gpio_etm_task_action_t'
+   82 | } gpio_etm_task_action_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h:91:9: error: expected specifier-qualifier-list before 'gpio_etm_task_action_t'
+   91 |         gpio_etm_task_action_t action;                                  /*!< Action to take by the ETM task module */
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h:94:3: error: storage class specified for parameter 'gpio_etm_task_config_t'
+   94 | } gpio_etm_task_config_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h:114:1: error: expected declaration specifiers before 'esp_err_t'
+  114 | esp_err_t gpio_new_etm_task(const gpio_etm_task_config_t *config, esp_etm_task_handle_t *ret_task, ...);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h:130:1: error: expected declaration specifiers before 'esp_err_t'
+  130 | esp_err_t gpio_etm_task_add_gpio(esp_etm_task_handle_t task, int gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h:146:1: error: expected declaration specifiers before 'esp_err_t'
+  146 | esp_err_t gpio_etm_task_rm_gpio(esp_etm_task_handle_t task, int gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:34:23: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'gpio_isr_handle_t'
+   34 | typedef intr_handle_t gpio_isr_handle_t;
+      |                       ^~~~~~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:41:16: error: storage class specified for parameter 'gpio_isr_t'
+   41 | typedef void (*gpio_isr_t)(void *arg);
+      |                ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:48:5: error: expected specifier-qualifier-list before 'gpio_mode_t'
+   48 |     gpio_mode_t mode;               /*!< GPIO mode: set input/output mode                     */
+      |     ^~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:55:3: error: storage class specified for parameter 'gpio_config_t'
+   55 | } gpio_config_t;
+      |   ^~~~~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:71:1: error: expected declaration specifiers before 'esp_err_t'
+   71 | esp_err_t gpio_config(const gpio_config_t *pGPIOConfig);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:82:1: error: expected declaration specifiers before 'esp_err_t'
+   82 | esp_err_t gpio_reset_pin(gpio_num_t gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:95:1: error: expected declaration specifiers before 'esp_err_t'
+   95 | esp_err_t gpio_set_intr_type(gpio_num_t gpio_num, gpio_int_type_t intr_type);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:112:1: error: expected declaration specifiers before 'esp_err_t'
+  112 | esp_err_t gpio_intr_enable(gpio_num_t gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:126:1: error: expected declaration specifiers before 'esp_err_t'
+  126 | esp_err_t gpio_intr_disable(gpio_num_t gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:141:1: error: expected declaration specifiers before 'esp_err_t'
+  141 | esp_err_t gpio_set_level(gpio_num_t gpio_num, uint32_t level);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:155:20: error: expected declaration specifiers or '...' before 'gpio_num_t'
+  155 | int gpio_get_level(gpio_num_t gpio_num);
+      |                    ^~~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:172:1: error: expected declaration specifiers before 'esp_err_t'
+  172 | esp_err_t gpio_set_direction(gpio_num_t gpio_num, gpio_mode_t mode);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:183:1: error: expected declaration specifiers before 'esp_err_t'
+  183 | esp_err_t gpio_input_enable(gpio_num_t gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:199:1: error: expected declaration specifiers before 'esp_err_t'
+  199 | esp_err_t gpio_set_pull_mode(gpio_num_t gpio_num, gpio_pull_mode_t pull);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:212:1: error: expected declaration specifiers before 'esp_err_t'
+  212 | esp_err_t gpio_wakeup_enable(gpio_num_t gpio_num, gpio_int_type_t intr_type);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:223:1: error: expected declaration specifiers before 'esp_err_t'
+  223 | esp_err_t gpio_wakeup_disable(gpio_num_t gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:249:1: error: expected declaration specifiers before 'esp_err_t'
+  249 | esp_err_t gpio_isr_register(void (*fn)(void *), void *arg, int intr_alloc_flags, gpio_isr_handle_t *handle);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:260:1: error: expected declaration specifiers before 'esp_err_t'
+  260 | esp_err_t gpio_pullup_en(gpio_num_t gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:271:1: error: expected declaration specifiers before 'esp_err_t'
+  271 | esp_err_t gpio_pullup_dis(gpio_num_t gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:282:1: error: expected declaration specifiers before 'esp_err_t'
+  282 | esp_err_t gpio_pulldown_en(gpio_num_t gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:293:1: error: expected declaration specifiers before 'esp_err_t'
+  293 | esp_err_t gpio_pulldown_dis(gpio_num_t gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:310:1: error: expected declaration specifiers before 'esp_err_t'
+  310 | esp_err_t gpio_install_isr_service(int intr_alloc_flags);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:341:1: error: expected declaration specifiers before 'esp_err_t'
+  341 | esp_err_t gpio_isr_handler_add(gpio_num_t gpio_num, gpio_isr_t isr_handler, void *args);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:353:1: error: expected declaration specifiers before 'esp_err_t'
+  353 | esp_err_t gpio_isr_handler_remove(gpio_num_t gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:365:1: error: expected declaration specifiers before 'esp_err_t'
+  365 | esp_err_t gpio_set_drive_capability(gpio_num_t gpio_num, gpio_drive_cap_t strength);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:377:1: error: expected declaration specifiers before 'esp_err_t'
+  377 | esp_err_t gpio_get_drive_capability(gpio_num_t gpio_num, gpio_drive_cap_t *strength);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:411:1: error: expected declaration specifiers before 'esp_err_t'
+  411 | esp_err_t gpio_hold_en(gpio_num_t gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:430:1: error: expected declaration specifiers before 'esp_err_t'
+  430 | esp_err_t gpio_hold_dis(gpio_num_t gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:509:1: error: expected declaration specifiers before 'esp_err_t'
+  509 | esp_err_t gpio_sleep_sel_en(gpio_num_t gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:518:1: error: expected declaration specifiers before 'esp_err_t'
+  518 | esp_err_t gpio_sleep_sel_dis(gpio_num_t gpio_num);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:532:1: error: expected declaration specifiers before 'esp_err_t'
+  532 | esp_err_t gpio_sleep_set_direction(gpio_num_t gpio_num, gpio_mode_t mode);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:546:1: error: expected declaration specifiers before 'esp_err_t'
+  546 | esp_err_t gpio_sleep_set_pull_mode(gpio_num_t gpio_num, gpio_pull_mode_t pull);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:591:1: error: expected declaration specifiers before 'esp_err_t'
+  591 | esp_err_t gpio_dump_io_configuration(FILE *out_stream, uint64_t io_bit_mask);
+      | ^~~~~~~~~
+/home/rafil/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:603:1: error: expected declaration specifiers before 'esp_err_t'
+  603 | esp_err_t gpio_get_io_config(gpio_num_t gpio_num, gpio_io_config_t *out_io_config);
+      | ^~~~~~~~~
+/home/rafil/Projects/blink/main/blink.c:7:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+    7 | {
+      | ^
+/home/rafil/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:437:6: error: old-style parameter declarations in prototyped function definition
+  437 | void vListInitialise( List_t * const pxList ) PRIVILEGED_FUNCTION;
+      |      ^~~~~~~~~~~~~~~
+/home/rafil/Projects/blink/main/blink.c:18: error: expected '{' at end of input
+ninja: build stopped: subcommand failed.
