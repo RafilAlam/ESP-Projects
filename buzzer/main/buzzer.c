@@ -1,5 +1,8 @@
 #include <stdio.h>
-#include <driver/ledc.h>
+#include <math.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "driver/ledc.h"
 
 #define BUZZPIN GPIO_NUM_16
 
@@ -23,4 +26,12 @@ void app_main(void)
   };
   ledc_channel_config(&channel);
   
+  uint32_t freq;
+  float t = 0;
+  while (1) {
+    freq = 500*sin(t+=0.01)+1000;
+    printf("Frequency: %lu\n", freq);
+    ledc_set_freq(LEDC_HIGH_SPEED_MODE, LEDC_TIMER_0, freq);
+    vTaskDelay(10 / portTICK_PERIOD_MS);
+  }
 }
